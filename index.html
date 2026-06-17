@@ -842,10 +842,9 @@
             letter-spacing: 3px; 
             color: #1a1a1a; 
             text-align: center; 
-            margin-bottom: 12px; 
+            margin-bottom: 40px; /* Увеличен отступ */
         }
 
-        /* Новая сетка для полей анкеты */
         .rsvp-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -983,7 +982,6 @@
             display: none; 
         }
 
-        /* Адаптив для анкеты */
         @media (max-width: 600px) {
             .rsvp-grid {
                 grid-template-columns: 1fr;
@@ -1229,8 +1227,8 @@
         <form id="guestForm" action="https://formspree.io/f/mykaodlp" method="POST">
             <div class="rsvp-grid">
 
-                <!-- Имя и фамилия (увеличен отступ через margin-bottom) -->
-                <div class="form-group full-width rsvp-animate" style="margin-bottom: 30px;">
+                <!-- Имя и фамилия (увеличен отступ через margin-top у сетки) -->
+                <div class="form-group full-width rsvp-animate" style="margin-top: 20px;">
                     <label>Ваше имя и фамилия</label>
                     <input type="text" name="name" id="guestName" placeholder="Например, Анна Петрова" required>
                 </div>
