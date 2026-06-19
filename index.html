@@ -823,7 +823,7 @@
             border-radius: 20px; 
         }
 
-        /* ----- АНКЕТА ГОСТЯ (ОБНОВЛЕНА) ----- */
+        /* ----- АНКЕТА ГОСТЯ ----- */
         .rsvp-screen { 
             background: #fff; 
             padding: 60px 20px; 
@@ -842,7 +842,7 @@
             letter-spacing: 3px; 
             color: #1a1a1a; 
             text-align: center; 
-            margin-bottom: 40px; /* Увеличен отступ */
+            margin-bottom: 40px;
         }
 
         .rsvp-grid {
@@ -1093,7 +1093,7 @@
         <p class="venue-name">Банкетный Зал «Император»</p>
         <p class="venue-address">г. Новосибирск, улица Романова 99</p>
         <div class="location-links">
-            <a href="https://yandex.by/maps/org/imperator/226979294024/?ll=82.942770%2C55.037129&mode=search&sctx=ZAAAAAgBEAAaKAoSCXmu78NBjjtAES%2F6CtKM80pAEhIJq7TFNT6TzT8RH%2FXXKyy4tz8iBgABAgMEBSgKOABAAkgBagJ1YZ0BzczMPaABAKgBAL0BHdS7o8IBBaKqlaRTggIy0JHQsNC90LrQtdGC0L3Ri9C5INCX0LDQuyDCqyDQmNC80L%2FQtdGA0LDRgtC%2B0YDCuy6KAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=82.942770%2C55.037129&sspn=0.012572%2C0.004903&text=Банкетный%20Зал%20«%20Император».&z=16.2" target="_blank" class="btn-maps">Показать на карте</a>
+            <a href="https://yandex.by/maps/org/imperator/226979294024/?ll=82.942770%2C55.037129&mode=search&sctx=ZAAAAAgBEAAaKAoSCXmu78NBjjtAES%2F6CtKM80pAEhIJq7TFNT6TzT8RH%2FXXKyy4tz8iBgABAgMEBSgKOABAAkgBagJ1YZ0BzczMPaABAKgBAL0BHdS7o8IBBaKqlaRTggIy0JHQsNC90LrQZXRg0L3Ri9C5INCX0LDQuyDCqyDQmNC80L%2FQtdGA0LDRgtC%2B0YDCuy6KAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=82.942770%2C55.037129&sspn=0.012572%2C0.004903&text=Банкетный%20Зал%20«%20Император».&z=16.2" target="_blank" class="btn-maps">Показать на карте</a>
         </div>
     </div>
 </div>
@@ -1220,25 +1220,26 @@
     </div>
 </div>
 
-<!-- АНКЕТА ГОСТЯ (ОБНОВЛЕНА) -->
+<!-- АНКЕТА ГОСТЯ -->
 <div class="rsvp-screen" id="rsvpScreen">
     <div class="rsvp-container">
         <h2 class="rsvp-title rsvp-animate">Анкета гостя</h2>
-        <form id="guestForm" action="https://formspree.io/f/mykaodlp" method="POST">
+        <form id="guestForm" action="https://formspree.io/f/xeewyjyq" method="POST">
+            <input type="hidden" name="_subject" value="Новый ответ из анкеты гостя">
             <div class="rsvp-grid">
 
-                <!-- Имя и фамилия (увеличен отступ через margin-top у сетки) -->
+                <!-- Имя и фамилия -->
                 <div class="form-group full-width rsvp-animate" style="margin-top: 20px;">
                     <label>Ваше имя и фамилия</label>
-                    <input type="text" name="name" id="guestName" placeholder="Например, Анна Петрова" required>
+                    <input type="text" name="Имя и фамилия" id="guestName" placeholder="Например, Анна Петрова" required>
                 </div>
 
                 <!-- Присутствие -->
                 <div class="form-group full-width rsvp-animate">
                     <label>Планируете присутствовать?</label>
                     <div class="radio-group-horizontal">
-                        <label><input type="radio" name="attendance" value="yes" required> Да, с радостью!</label>
-                        <label><input type="radio" name="attendance" value="no"> К сожалению, нет</label>
+                        <label><input type="radio" name="Присутствие" value="Да, с радостью!" required> Да, с радостью!</label>
+                        <label><input type="radio" name="Присутствие" value="Нет, к сожалению"> К сожалению, нет</label>
                     </div>
                 </div>
 
@@ -1246,15 +1247,15 @@
                 <div class="form-group full-width rsvp-animate">
                     <label>Выберите ваши любимые напитки</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" name="drink_vodka" value="vodka"> Водка</label>
-                        <label><input type="checkbox" name="drink_cognac" value="cognac"> Коньяк</label>
-                        <label><input type="checkbox" name="drink_wine" value="wine"> Вино</label>
-                        <label><input type="checkbox" name="drink_champagne" value="champagne"> Шампанское</label>
-                        <label><input type="checkbox" name="drink_soft" value="soft"> Безалкогольное</label>
-                        <label><input type="checkbox" id="drinkOtherCheck" name="drink_other" value="other"> Другое</label>
+                        <label><input type="checkbox" name="Напитки" value="Водка"> Водка</label>
+                        <label><input type="checkbox" name="Напитки" value="Коньяк"> Коньяк</label>
+                        <label><input type="checkbox" name="Напитки" value="Вино"> Вино</label>
+                        <label><input type="checkbox" name="Напитки" value="Шампанское"> Шампанское</label>
+                        <label><input type="checkbox" name="Напитки" value="Безалкогольное"> Безалкогольное</label>
+                        <label><input type="checkbox" id="drinkOtherCheck" name="Напитки" value="Другое"> Другое</label>
                     </div>
                     <div class="other-drink-input" id="otherDrinkInput">
-                        <input type="text" name="drink_other_text" placeholder="Напишите, что именно...">
+                        <input type="text" name="Другое_напиток" placeholder="Напишите, что именно...">
                     </div>
                     <div class="drinks-hint">✔️ Отметьте все варианты, которые вам нравятся</div>
                 </div>
@@ -1262,14 +1263,14 @@
                 <!-- Пожелания -->
                 <div class="form-group full-width rsvp-animate">
                     <label>Ваши пожелания или комментарии (аллергии, диета)</label>
-                    <input type="text" name="wishes" id="guestWishes" placeholder="Сообщите нам важные детали...">
+                    <input type="text" name="Пожелания" id="guestWishes" placeholder="Сообщите нам важные детали...">
                 </div>
 
-            </div> <!-- /rsvp-grid -->
+            </div>
 
             <button type="submit" class="submit-btn rsvp-animate">Отправить ответ</button>
         </form>
-        <div id="formMessage" class="hidden-message">Спасибо! Ждём вас на нашей свадьбе 🥂</div>
+        <div id="formMessage" class="hidden-message">✅ Спасибо! Ждём вас на нашей свадьбе 🥂</div>
     </div>
 </div>
 
